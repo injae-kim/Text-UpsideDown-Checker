@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread('./img/scan_3.jpg')
+img = cv2.imread('./img/scan_2_reversed.jpg')
 # cv2.imshow('img', img)
 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -50,12 +50,15 @@ for cnt in contours:    # for each string
     crop_points.append(w - 1)
     cv2.imshow('crop_line', _crop)
 
+    one_character_width = 0
+    one_character_height = h
 
     for i in range(len(crop_points) - 1):   # for each one character
 
         consonant_list = []# 자음 리스트
         vowel_list = [] # 모음 리스트
 
+        one_character_width = crop_points[i+1] - crop_points[i]
 
         if crop_points[i+1] - crop_points[i] > 0:
 
@@ -87,11 +90,29 @@ for cnt in contours:    # for each string
         # 자음이 여러개, 모음이 하나만 검출된 경우 (best case)
         if len(consonant_list) == 1 and len(vowel_list) == 1:
 
-            if consonant_list[-1][0] < vowel_list[0][0]:    # 모음이 자음보다 오른쪽에 위치, ex) 가
+            consonant_w, consonant_h = consonant_list[0][2:]
+            vowel_w, vowel_h = vowel_list[0][2:]
+
+            print('자음 w, h: ', consonant_w, consonant_h)
+            print('모음 w, h: ', vowel_w, vowel_h)
+            print('글자 w, h: ', one_character_width, one_character_height)
+
+            #TODO: false case 예외처리
+
+            # 모음이 너무 작은경우, 직선 등의 노이즈가 모음으로 잘못 검출된 경우
+            if vowel_w / one_character_width < 0.5 and vowel_h / one_character_height < 0.5:
+                continue
+
+            # 자음이 너무 작은경우
+            if consonant_w / one_character_width < 0.25 and consonant_h / one_character_height < 0.25:
+                continue
+
+
+            if consonant_list[0][0] < vowel_list[0][0]:    # 모음이 자음보다 오른쪽에 위치, ex) 가
                 direction_count += 1
                 print('good direction!')
 
-            elif consonant_list[-1][1] < vowel_list[0][1]:   # 모음이 자음보다 아래에 위치, ex) 그
+            elif consonant_list[0][1] < vowel_list[0][1]:   # 모음이 자음보다 아래에 위치, ex) 그
                 direction_count += 1
                 print('good direction!')
             
@@ -99,13 +120,18 @@ for cnt in contours:    # for each string
                 direction_count -= 1
                 print('bad direction!')
 
-            # cv2.imshow('crop_result', backtorgb)
-            # while True:
-            #     if cv2.waitKey(1) == 27:
-            #         break
+            print('자음 col, row, w, h: ', consonant_list[0])
+            print('모음 col, row, w, h: ', vowel_list[0])
 
-            print('direction_count: ', direction_count)
-            print()
+            backtorgb = cv2.resize(backtorgb, (512, 512))
+            cv2.imshow('crop_result', backtorgb)
+
+            while True:
+                if cv2.waitKey(1) == 27:
+                    break
+
+        print('direction_count: ', direction_count)
+        print()
 
     
 
