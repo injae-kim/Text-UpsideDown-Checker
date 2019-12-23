@@ -25,21 +25,32 @@ for cnt in contours:
     crop = thresh[y:y+h, x:x+w]
     cv2.imshow('crop', crop)
 
+    pass_flag = False
+
+    crop_points = [0]
+
     for col in range(w):
         for row in range(h):
-            
+
             if crop[row][col] > 0:
+                pass_flag = False
                 break
 
-            if row == h - 1:
-                cv2.line(crop, (col, 0), (col, row), (255), 1)
-                col += 10
+            if row == h - 1 and pass_flag == False:
+                # cv2.line(crop, (col, 0), (col, row), (255), 1)
+                crop_points.append(col)
+                pass_flag = True
 
+    crop_points.append(w - 1)
     cv2.imshow('crop_line', crop)
 
-    while True:
-        if cv2.waitKey(1) == 27:
-            break
+    for i in range(len(crop_points) - 1):
+        if crop_points[i+1] - crop_points[i] > 0:
+            cv2.imshow('crop_frag', crop[:,crop_points[i]:crop_points[i+1]])
+
+        while True:
+            if cv2.waitKey(1) == 27:
+                break
 
 
 for cnt in contours:
