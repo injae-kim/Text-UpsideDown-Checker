@@ -1,7 +1,9 @@
 import cv2
 import numpy as np
+import time
+start = time.time()
 
-img = cv2.imread('./img/scan_2_reversed.jpg')
+img = cv2.imread('./img/img_reversed/Document 68_18.jpg')
 # cv2.imshow('img', img)
 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -19,14 +21,16 @@ result = cv2.morphologyEx(thresh, cv2.MORPH_CLOSE, kernel)
 contours, hierarchy = cv2.findContours(result, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
 
 
-direction_count = 0
+direction_good_count = 0
+direction_bad_count = 0
+character_count = 0
 
 for cnt in contours:    # for each string
 
     x, y, w, h = cv2.boundingRect(cnt)
 
     crop = thresh[y:y+h, x:x+w]
-    cv2.imshow('crop', crop)
+    # cv2.imshow('crop', crop)
 
     pass_flag = False
 
@@ -48,7 +52,7 @@ for cnt in contours:    # for each string
                 pass_flag = True
 
     crop_points.append(w - 1)
-    cv2.imshow('crop_line', _crop)
+    # cv2.imshow('crop_line', _crop)
 
     one_character_width = 0
     one_character_height = h
@@ -71,6 +75,8 @@ for cnt in contours:    # for each string
             # 한 글자 안에 너무 많은 자음/모음이 검출되거나 아예 검출되지 않은 경우 pass
             if len(_contours) >= 4 or len (_contours) == 0:
                 continue
+
+            character_count += 1
 
             for cnt in _contours:
                 x, y, w, h = cv2.boundingRect(cnt)
@@ -105,44 +111,45 @@ for cnt in contours:    # for each string
 
 
             if consonant_list[0][0] < vowel_list[0][0]:    # 모음이 자음보다 오른쪽에 위치, ex) 가
-                direction_count += 1
-                print('good direction!')
+                direction_good_count += 1
+                # print('good direction!')
 
             elif consonant_list[0][1] < vowel_list[0][1]:   # 모음이 자음보다 아래에 위치, ex) 그
-                direction_count += 1
-                print('good direction!')
+                direction_good_count += 1
+                # print('good direction!')
             
             else:
-                direction_count -= 1
-                print('bad direction!')
+                direction_bad_count += 1
+                # print('bad direction!')
 
-            print('자음 col, row, w, h: ', consonant_list[0])
-            print('모음 col, row, w, h: ', vowel_list[0])
+            # print('자음 col, row, w, h: ', consonant_list[0])
+            # print('모음 col, row, w, h: ', vowel_list[0])
 
-            backtorgb = cv2.resize(backtorgb, (512, 512))
-            cv2.imshow('crop_result', backtorgb)
+            # backtorgb = cv2.resize(backtorgb, (512, 512))
+            # cv2.imshow('crop_result', backtorgb)
 
-            while True:
-                if cv2.waitKey(1) == 27:
-                    break
+            # while True:
+            #     if cv2.waitKey(1) == 27:
+            #         break
+        # print()
 
-        print('direction_count: ', direction_count)
-        print()
-
+print('good: ', direction_good_count)
+print('bad: ', direction_bad_count)
+print('total character: ', character_count)
+print('direction: ', direction_good_count - direction_bad_count)
+print('time: ', time.time() - start)
     
 
 
-for cnt in contours:
-    x, y, w, h = cv2.boundingRect(cnt)
-    cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 2)
+# for cnt in contours:
+#     x, y, w, h = cv2.boundingRect(cnt)
+#     cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 2)
 
-cv2.imshow('contours', img)
-
-cv2.imwrite('result.jpg', img)
+# cv2.imshow('contours', img)
 
 
-while True:
-    if cv2.waitKey(1) == 27:
-        break
+# while True:
+#     if cv2.waitKey(1) == 27:
+#         break
 
 cv2.destroyAllWindows()
