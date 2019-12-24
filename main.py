@@ -93,10 +93,6 @@ for cnt in contours:    # for each string
             consonant_w, consonant_h = consonant_list[0][2:]
             vowel_w, vowel_h = vowel_list[0][2:]
 
-            print('자음 w, h: ', consonant_w, consonant_h)
-            print('모음 w, h: ', vowel_w, vowel_h)
-            print('글자 w, h: ', one_character_width, one_character_height)
-
             #TODO: false case 예외처리
 
             # 모음이 너무 작은경우, 직선 등의 노이즈가 모음으로 잘못 검출된 경우
@@ -141,6 +137,8 @@ for cnt in contours:
     cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 2)
 
 cv2.imshow('contours', img)
+
+cv2.imwrite('result.jpg', img)
 
 
 while True:
