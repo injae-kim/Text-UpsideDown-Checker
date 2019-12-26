@@ -1,0 +1,435 @@
+helios789@helios789-17ZD990-VX70K:~/Text-UpsideDown-Checker$ python3 main.py 
+
+--- RESULT:  ./img/img/Document 68_15.jpg ---
+good:  17
+bad:  3
+total character:  451
+direction:  14
+time:  1.2446134090423584
+
+--- RESULT:  ./img/img/Document 68_17.jpg ---
+good:  41
+bad:  1
+total character:  614
+direction:  40
+time:  2.116266965866089
+
+--- RESULT:  ./img/img/Document 68_19.jpg ---
+good:  18
+bad:  3
+total character:  445
+direction:  15
+time:  1.0454754829406738
+
+--- RESULT:  ./img/img/Document 68_4.jpg ---
+good:  60
+bad:  3
+total character:  908
+direction:  57
+time:  1.8293781280517578
+
+--- RESULT:  ./img/img/scan_2.jpg ---
+good:  39
+bad:  0
+total character:  462
+direction:  39
+time:  0.6901946067810059
+
+--- RESULT:  ./img/img/Document 68_18.jpg ---
+good:  22
+bad:  3
+total character:  990
+direction:  19
+time:  1.4323883056640625
+
+--- RESULT:  ./img/img/Document 68_6.jpg ---
+good:  43
+bad:  3
+total character:  655
+direction:  40
+time:  1.464930772781372
+
+--- RESULT:  ./img/img/Document 68_13.jpg ---
+good:  41
+bad:  0
+total character:  654
+direction:  41
+time:  1.355210781097412
+
+--- RESULT:  ./img/img/Document 68_2.jpg ---
+good:  45
+bad:  0
+total character:  802
+direction:  45
+time:  1.3753070831298828
+
+--- RESULT:  ./img/img/Document 68_9.jpg ---
+good:  33
+bad:  1
+total character:  654
+direction:  32
+time:  1.6845521926879883
+
+--- RESULT:  ./img/img/scan_3.jpg ---
+good:  52
+bad:  1
+total character:  628
+direction:  51
+time:  0.9947981834411621
+
+--- RESULT:  ./img/img/Document 68_12.jpg ---
+good:  45
+bad:  2
+total character:  645
+direction:  43
+time:  1.9717984199523926
+
+--- RESULT:  ./img/img/Document 68_16.jpg ---
+good:  51
+bad:  0
+total character:  757
+direction:  51
+time:  2.192678451538086
+
+--- RESULT:  ./img/img/Document 68_3.jpg ---
+good:  98
+bad:  2
+total character:  901
+direction:  96
+time:  1.7078330516815186
+
+--- RESULT:  ./img/img/Document 68_7.jpg ---
+good:  50
+bad:  0
+total character:  619
+direction:  50
+time:  1.1072449684143066
+
+--- RESULT:  ./img/img/Document 68_10.jpg ---
+good:  40
+bad:  4
+total character:  559
+direction:  36
+time:  1.5966086387634277
+
+--- RESULT:  ./img/img/Document 68_5.jpg ---
+good:  42
+bad:  0
+total character:  549
+direction:  42
+time:  1.597503423690796
+
+--- RESULT:  ./img/img/Document 68_14.jpg ---
+good:  51
+bad:  4
+total character:  761
+direction:  47
+time:  1.6477587223052979
+
+--- RESULT:  ./img/img/Document 68_8.jpg ---
+good:  42
+bad:  0
+total character:  598
+direction:  42
+time:  1.6182842254638672
+
+--- RESULT:  ./img/img/Document 68_11.jpg ---
+good:  42
+bad:  0
+total character:  653
+direction:  42
+time:  1.7577183246612549
+
+
+
+helios789@helios789-17ZD990-VX70K:~/Text-UpsideDown-Checker$ python3 main.py 
+
+--- RESULT:  ./img/img_reversed/Document 68_15.jpg ---
+good:  5
+bad:  17
+total character:  452
+direction:  -12
+time:  1.3653147220611572
+
+--- RESULT:  ./img/img_reversed/Document 68_17.jpg ---
+good:  5
+bad:  34
+total character:  621
+direction:  -29
+time:  2.3273096084594727
+
+--- RESULT:  ./img/img_reversed/Document 68_19.jpg ---
+good:  2
+bad:  17
+total character:  439
+direction:  -15
+time:  1.1273930072784424
+
+--- RESULT:  ./img/img_reversed/Document 68_4.jpg ---
+good:  7
+bad:  62
+total character:  910
+direction:  -55
+time:  1.5987114906311035
+
+--- RESULT:  ./img/img_reversed/Document 68_18.jpg ---
+good:  3
+bad:  26
+total character:  988
+direction:  -23
+time:  1.2770397663116455
+
+--- RESULT:  ./img/img_reversed/Document 68_6.jpg ---
+good:  6
+bad:  40
+total character:  648
+direction:  -34
+time:  1.4934325218200684
+
+--- RESULT:  ./img/img_reversed/Document 68_13.jpg ---
+good:  1
+bad:  40
+total character:  650
+direction:  -39
+time:  1.7129957675933838
+
+--- RESULT:  ./img/img_reversed/Document 68_2.jpg ---
+good:  1
+bad:  47
+total character:  802
+direction:  -46
+time:  1.514857530593872
+
+--- RESULT:  ./img/img_reversed/Document 68_9.jpg ---
+good:  2
+bad:  33
+total character:  655
+direction:  -31
+time:  1.6401491165161133
+
+--- RESULT:  ./img/img_reversed/Document 68_12.jpg ---
+good:  2
+bad:  44
+total character:  639
+direction:  -42
+time:  1.4286141395568848
+
+--- RESULT:  ./img/img_reversed/Document 68_16.jpg ---
+good:  6
+bad:  49
+total character:  755
+direction:  -43
+time:  1.724151611328125
+
+--- RESULT:  ./img/img_reversed/Document 68_3.jpg ---
+good:  5
+bad:  99
+total character:  903
+direction:  -94
+time:  1.5158650875091553
+
+--- RESULT:  ./img/img_reversed/Document 68_7.jpg ---
+good:  0
+bad:  49
+total character:  625
+direction:  -49
+time:  1.1769583225250244
+
+--- RESULT:  ./img/img_reversed/Document 68_10.jpg ---
+good:  9
+bad:  39
+total character:  582
+direction:  -30
+time:  1.4418482780456543
+
+--- RESULT:  ./img/img_reversed/Document 68_5.jpg ---
+good:  0
+bad:  41
+total character:  553
+direction:  -41
+time:  1.4597408771514893
+
+--- RESULT:  ./img/img_reversed/Document 68_14.jpg ---
+good:  5
+bad:  50
+total character:  766
+direction:  -45
+time:  1.9348347187042236
+
+--- RESULT:  ./img/img_reversed/Document 68_8.jpg ---
+good:  2
+bad:  46
+total character:  608
+direction:  -44
+time:  1.2967915534973145
+
+--- RESULT:  ./img/img_reversed/Document 68_11.jpg ---
+good:  7
+bad:  41
+total character:  645
+direction:  -34
+time:  1.686359167098999
+
+
+
+
+helios789@helios789-17ZD990-VX70K:~/Text-UpsideDown-Checker$ python3 main.py 
+
+--- RESULT:  ./img/img2/Document 69_11.jpg ---
+good:  27
+bad:  1
+total character:  453
+direction:  26
+time:  1.3831663131713867
+
+--- RESULT:  ./img/img2/Document 69_7.jpg ---
+good:  45
+bad:  5
+total character:  680
+direction:  40
+time:  4.079873561859131
+
+--- RESULT:  ./img/img2/Document 69_5.jpg ---
+good:  24
+bad:  3
+total character:  349
+direction:  21
+time:  2.866415500640869
+
+--- RESULT:  ./img/img2/Document 69_6.jpg ---
+good:  17
+bad:  2
+total character:  434
+direction:  15
+time:  2.170012950897217
+
+--- RESULT:  ./img/img2/Document 69_3.jpg ---
+good:  13
+bad:  6
+total character:  489
+direction:  7
+time:  1.9296174049377441
+
+--- RESULT:  ./img/img2/Document 69_10.jpg ---
+good:  30
+bad:  15
+total character:  1352
+direction:  15
+time:  3.228039026260376
+
+--- RESULT:  ./img/img2/Document 69_9.jpg ---
+good:  14
+bad:  3
+total character:  608
+direction:  11
+time:  3.336589813232422
+
+--- RESULT:  ./img/img2/Document 69_8.jpg ---
+good:  33
+bad:  12
+total character:  793
+direction:  21
+time:  3.458559513092041
+
+--- RESULT:  ./img/img2/Document 69_2.jpg ---
+good:  26
+bad:  10
+total character:  869
+direction:  16
+time:  2.3179287910461426
+
+--- RESULT:  ./img/img2/Document 69_4.jpg ---
+good:  13
+bad:  3
+total character:  636
+direction:  10
+time:  2.8592324256896973
+
+
+
+helios789@helios789-17ZD990-VX70K:~/Text-UpsideDown-Checker$ python3 main.py 
+
+--- RESULT:  ./img/img2_reversed/Document 69_11.jpg ---
+good:  1
+bad:  28
+total character:  448
+direction:  -27
+time:  1.2508604526519775
+
+--- RESULT:  ./img/img2_reversed/scan_2_reversed.jpg ---
+good:  1
+bad:  39
+total character:  460
+direction:  -38
+time:  0.7123904228210449
+
+--- RESULT:  ./img/img2_reversed/Document 69_7.jpg ---
+good:  12
+bad:  40
+total character:  677
+direction:  -28
+time:  2.416067123413086
+
+--- RESULT:  ./img/img2_reversed/Document 69_5.jpg ---
+good:  5
+bad:  24
+total character:  339
+direction:  -19
+time:  2.5683183670043945
+
+--- RESULT:  ./img/img2_reversed/Document 69_6.jpg ---
+good:  9
+bad:  15
+total character:  436
+direction:  -6
+time:  1.7987616062164307
+
+--- RESULT:  ./img/img2_reversed/Document 69_3.jpg ---
+good:  13
+bad:  10
+total character:  485
+direction:  3
+time:  1.2886765003204346
+
+--- RESULT:  ./img/img2_reversed/scan_3_reversed.jpg ---
+good:  2
+bad:  52
+total character:  627
+direction:  -50
+time:  1.019338607788086
+
+--- RESULT:  ./img/img2_reversed/Document 69_10.jpg ---
+good:  28
+bad:  24
+total character:  1357
+direction:  4
+time:  2.581216335296631
+
+--- RESULT:  ./img/img2_reversed/Document 69_9.jpg ---
+good:  4
+bad:  11
+total character:  608
+direction:  -7
+time:  2.1038012504577637
+
+--- RESULT:  ./img/img2_reversed/Document 69_8.jpg ---
+good:  11
+bad:  32
+total character:  792
+direction:  -21
+time:  2.590747833251953
+
+--- RESULT:  ./img/img2_reversed/Document 69_2.jpg ---
+good:  11
+bad:  24
+total character:  860
+direction:  -13
+time:  1.9113271236419678
+
+--- RESULT:  ./img/img2_reversed/Document 69_4.jpg ---
+good:  5
+bad:  15
+total character:  629
+direction:  -10
+time:  2.5545592308044434
+
